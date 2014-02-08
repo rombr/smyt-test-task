@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<models>
+	<users>
+		<title>Пользователи</title>
+		<fields>
+			<type>char</type>
+			<id>name</id>
+			<title>Имя</title>
+		</fields>
+		<fields>
+			<type>int</type>
+			<id>paycheck</id>
+			<title>Зарплата</title>
+		</fields>
+		<fields>
+			<type>date</type>
+			<id>date_joined</id>
+			<title>Дата поступления на работу</title>
+		</fields>
+	</users>
+	<rooms>
+		<title>Комнаты</title>
+		<fields>
+			<type>char</type>
+			<id>department</id>
+			<title>Отдел</title>
+		</fields>
+		<fields>
+			<type>int</type>
+			<id>spots</id>
+			<title>Вместимость</title>
+			</fields>
+	</rooms>
+</models>

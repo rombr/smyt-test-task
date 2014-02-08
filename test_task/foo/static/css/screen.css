@@ -1,0 +1,16 @@
+.bold {
+	font-weight: bold;
+}
+
+.error {
+	color: red;
+	border-color: red;
+}
+
+table#data {
+	width: 100%;
+}
+
+table#data td{
+	margin: 20px 5px;
+}
