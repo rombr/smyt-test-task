@@ -129,7 +129,7 @@ DEFAULT_LOGGING = {
 }
 
 # Path to models config file for foo app
-FOO_MODELS_CONFIG = 'models.xml'
+FOO_MODELS_CONFIG = os.path.join(BASE_DIR, 'models.xml')
 
 
 try:
