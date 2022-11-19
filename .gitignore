@@ -42,4 +42,4 @@ env
 *.log
 *.db
 local_settings.py
-
+*.sublime-*

@@ -1,10 +1,14 @@
-from django.conf.urls import patterns, include, url
-import views
+from django.urls import path
+
+from . import views
 
 
-urlpatterns = patterns('',
-    url(r'^$', views.home, name='home'),
-    url(r'^api/(?P<model_name>\w+)/(?P<object_id>\d+)/$', views.api_details,
-                                                name='api_details'),
-    url(r'^api/(?P<model_name>\w+)/$', views.api, name='api'),
-)
+urlpatterns = [
+    path("", views.home, name="home"),
+    path(
+        "api/<str:model_name>/<int:object_id>/",
+        views.api_details,
+        name="api_details",
+    ),
+    path("api/<str:model_name>/", views.api, name="api"),
+]

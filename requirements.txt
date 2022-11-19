@@ -1,4 +1,3 @@
-Django<1.7
-South
+Django<4.2
 PyYAML
 xmltodict
