@@ -38,6 +38,7 @@ nosetests.xml
 
 MANIFEST
 site_static
+staticfiles
 env
 *.log
 *.db
