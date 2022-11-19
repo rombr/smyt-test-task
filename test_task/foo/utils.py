@@ -41,20 +41,20 @@ def get_models_config(config_file=MODELS_CONFIG):
     config_file = config_file or ""
 
     if not os.path.exists(config_file):
-        raise NoConfigFileError("Config file %s does not exist" % config_file)
+        raise NoConfigFileError(f"Config file {config_file} does not exist")
     cfg_type = config_file.split(".")[-1]
 
     models_spec = {}
     if cfg_type == "yaml":
         try:
-            models_spec = load(open(MODELS_CONFIG, "r").read(), Loader=Loader)
+            models_spec = load(open(config_file, "r").read(), Loader=Loader)
         except (ParserError, ScannerError) as e:
             raise ConfigFileParseError(e)
         else:
             logger.debug(models_spec)
     elif cfg_type == "xml":
         try:
-            models_spec = xmltodict.parse(open(MODELS_CONFIG, "r").read()).get(
+            models_spec = xmltodict.parse(open(config_file, "r").read()).get(
                 "models", {}
             )
         except (xml.parsers.expat.ExpatError) as e:
@@ -62,7 +62,7 @@ def get_models_config(config_file=MODELS_CONFIG):
         else:
             logger.debug(models_spec)
     else:
-        raise InvalidConfigFileFormatError("Format: %s not supported" % cfg_type)
+        raise InvalidConfigFileFormatError(f"Format: {cfg_type} not supported")
     return models_spec
 
 

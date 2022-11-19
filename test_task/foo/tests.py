@@ -2,15 +2,15 @@ from datetime import date
 
 from django.test import TestCase
 from django.core.exceptions import ValidationError
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 
-from utils import (
+from .utils import (
     get_models_config,
     NoConfigFileError,
     InvalidConfigFileFormatError,
     ConfigFileParseError,
 )
-from models import Users, Rooms
+from .models import Users, Rooms
 
 
 class LoadConfigTestCase(TestCase):

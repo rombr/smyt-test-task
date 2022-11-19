@@ -1,6 +1,6 @@
 """Created dynamically"""
 
-from django.db.models import Model, CharField, DateField, IntegerField, AutoField
+from django.db.models import Model, CharField, DateField, IntegerField
 from django.contrib import admin
 
 from .utils import get_models_config
