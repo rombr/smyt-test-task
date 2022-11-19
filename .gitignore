@@ -41,5 +41,6 @@ site_static
 env
 *.log
 *.db
+.env
 local_settings.py
 *.sublime-*
